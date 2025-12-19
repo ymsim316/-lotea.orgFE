@@ -16,8 +16,8 @@ export default function Footer() {
       <p className="footer-logo">lotea.org</p>
       
       {/* 설명 텍스트 */}
-      <p className="footer-text">I'm a paragraph. Click here to add your own text and edit me.</p>
-      <p className="footer-text">Hosting by I'MWEB</p>
+      <p className="footer-text">This website is operated to present the research and cooperative activities conducted by the non-profit organization, Logistics Tetris Association.</p>
+      <p className="footer-text">© 2025 Logistics Tetris Association. All rights reserved.</p>
       
       {/* 링크들 */}
       <div className="footer-links">
