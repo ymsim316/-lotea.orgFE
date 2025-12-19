@@ -10,8 +10,8 @@ export default function ContactSection() {
         {/* 이미지 영역 */}
         <div className="contact-image">
           <Image 
-            src="/images/연락처안내.png" 
-            alt="연락처 안내"
+            src="/images/contact.png" 
+            alt="contact"
             width={480}
             height={360}
             style={{ objectFit: 'cover' }}
