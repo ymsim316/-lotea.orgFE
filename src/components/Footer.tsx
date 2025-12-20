@@ -35,7 +35,7 @@ export default function Footer() {
           href="/terms"
           onClick={(e) => {
             e.preventDefault();
-            setType("terms");
+            setDoc("terms");
             setOpen(true);
           }}
         >
@@ -46,7 +46,7 @@ export default function Footer() {
           href="/privacy"
           onClick={(e) => {
             e.preventDefault();
-            setType("privacy");
+            setDoc("privacy");
             setOpen(true);
           }}
         >
@@ -57,10 +57,10 @@ export default function Footer() {
       {/* 모달 */}
       <LegalModal
         open={open}
-        title={type === "terms" ? "이용약관" : "개인정보처리방침"}
+        title={doc === "terms" ? "이용약관" : "개인정보처리방침"}
         onClose={() => setOpen(false)}
       >
-        {type === "terms" ? <TermsContent /> : <PrivacyContent />}
+        {doc === "terms" ? <TermsContent /> : <PrivacyContent />}
       </LegalModal>
     </footer>
   );
