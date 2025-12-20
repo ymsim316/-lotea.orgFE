@@ -1,6 +1,14 @@
+"use client";
+
 import Link from 'next/link';
+import { useState } from "react";
+import LegalModal from "@/components/LegalModal"; // 경로는 프로젝트에 맞게 조정
 
 export default function Footer() {
+  const [open, setOpen] = useState(false);
+  const [doc, setDoc] = useState<"terms" | "privacy">("terms");
+
+  const title = doc === "terms" ? "이용약관" : "개인정보처리방침";
   return (
     <footer className="footer">
       {/* 소셜 아이콘 */}
@@ -21,8 +29,25 @@ export default function Footer() {
       
       {/* 링크들 */}
       <div className="footer-links">
-        <Link href="/terms">이용약관</Link>
-        <Link href="/privacy">개인정보처리방침</Link>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            setDoc("terms");
+            setOpen(true);
+          }}
+        >
+          이용약관
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            setDoc("privacy");
+            setOpen(true);
+          }}
+        >
+          개인정보처리방침
+        </a>
       </div>
     </footer>
   );
